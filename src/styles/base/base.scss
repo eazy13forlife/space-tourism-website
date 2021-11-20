@@ -1,3 +1,37 @@
+@use "../abstracts";
+
+:root {
+  --color-primary: rgb(11, 13, 23);
+  --color-secondary: rgb(208, 214, 249);
+  --color-tertiary: rgb(255, 255, 255);
+
+  --fs-900: 15rem;
+  --fs-800: 10rem;
+  --fs-700: 5.6rem;
+  --fs-600: 3.2rem;
+  --fs-500: 2.8rem;
+  --fs-400: 1.8rem;
+  --fs-300: 1.6rem;
+  --fs-200: 1.4rem;
+  @include abstracts.respondMax(768px) {
+    --fs-800: 8rem;
+    --fs-700: 4rem;
+    --fs-600: 2.4rem;
+    --fs-500: 2rem;
+    --fs-400: 1.6rem;
+  }
+  @include abstracts.respondMax(375px) {
+    --fs-800: 5.6rem;
+    --fs-700: 2.4rem;
+    --fs-600: 1.6rem;
+    --fs-500: 1.6rem;
+    --fs-400: 1.5rem;
+    --fs-300: 1.4rem;
+  }
+  --ff-serif: "Bellefair", serif;
+  --ff-sans-cond: "Barlow Condensed", sans-serif;
+  --ff-sans-normal: "Barlow", sans-serif;
+}
 html {
   font-size: 62.5%;
 }
@@ -11,5 +45,31 @@ html {
 }
 
 body {
+  line-height: 1.5;
+  min-height: 100vh;
   box-sizing: border-box;
+  font-size: 1.4rem;
+  color: black;
+}
+
+img {
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

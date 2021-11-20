@@ -1,7 +1,20 @@
 import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+
+import Home from "./views/Home";
+import Destination from "./views/Destination";
+import Crew from "./views/Crew";
+import Technology from "./views/Technology";
 
 const App = () => {
-  return null;
+  return (
+    <BrowserRouter>
+      <Route path="/" exact component={() => <Home />} />
+      <Route path="/destination" exact component={() => <Destination />} />
+      <Route path="/crew" exact component={() => <Crew />} />
+      <Route path="/technology" exact component={() => <Technology />} />
+    </BrowserRouter>
+  );
 };
 
 export default App;
