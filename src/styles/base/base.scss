@@ -1,9 +1,9 @@
 @use "../abstracts";
 
 :root {
-  --color-primary: rgb(11, 13, 23);
-  --color-secondary: rgb(208, 214, 249);
-  --color-tertiary: rgb(255, 255, 255);
+  --color-primary: 11, 13, 23;
+  --color-secondary: 208, 214, 249;
+  --color-tertiary: 255, 255, 255;
 
   --fs-900: 15rem;
   --fs-800: 10rem;
@@ -13,14 +13,15 @@
   --fs-400: 1.8rem;
   --fs-300: 1.6rem;
   --fs-200: 1.4rem;
-  @include abstracts.respondMax(768px) {
+  @include abstracts.respondMax(abstracts.$tablet) {
     --fs-800: 8rem;
     --fs-700: 4rem;
     --fs-600: 2.4rem;
     --fs-500: 2rem;
     --fs-400: 1.6rem;
+    --fs-300: 1.4rem;
   }
-  @include abstracts.respondMax(375px) {
+  @include abstracts.respondMax(abstracts.$mobile) {
     --fs-800: 5.6rem;
     --fs-700: 2.4rem;
     --fs-600: 1.6rem;
@@ -31,6 +32,12 @@
   --ff-serif: "Bellefair", serif;
   --ff-sans-cond: "Barlow Condensed", sans-serif;
   --ff-sans-normal: "Barlow", sans-serif;
+
+  --margin-extra-large: 4.8rem;
+  --margin-large: 3.2rem;
+  --margin-medium: 2rem;
+  --margin-regular: 1.4rem;
+  --margin-small: 1.2rem;
 }
 html {
   font-size: 62.5%;
@@ -49,7 +56,6 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
   font-size: 1.4rem;
-  color: black;
 }
 
 img {

@@ -1,3 +1,7 @@
+$desktop-small: 1000px;
+$tablet: 768px;
+$mobile: 375px;
+
 @mixin respondMax($size) {
   @media (max-width: $size/16px * 1em) {
     @content;

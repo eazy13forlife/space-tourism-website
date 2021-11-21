@@ -1,0 +1,60 @@
+@use "../../styles/abstracts";
+
+.Header {
+  display: flex;
+  align-items: center;
+  margin-top: 2.5rem;
+  @include abstracts.respondMax(abstracts.$desktop-small) {
+    margin-top: 0rem;
+  }
+  &__logo {
+    margin-left: var(--margin-extra-large);
+  }
+  &__nav {
+    position: relative;
+    background-color: rgba(var(--color-tertiary), 0.1);
+    padding: 0rem 12rem;
+    margin-left: auto;
+    -webkit-backdrop-filter: blur(1rem);
+    backdrop-filter: blur(1rem);
+    @include abstracts.respondMax(abstracts.$desktop-small) {
+      padding: 0rem 3rem;
+    }
+  }
+  &__line {
+    position: absolute;
+    width: 40rem;
+    height: 1px;
+    top: 50%;
+    right: 95%;
+    background-color: rgba(var(--color-tertiary), 0.4);
+    @include abstracts.respondMax(1200px) {
+      width: 25rem;
+    }
+    @include abstracts.respondMax(1060px) {
+      display: none;
+    }
+  }
+  &__list {
+    list-style-type: none;
+    display: flex;
+  }
+  &__nav-item {
+    &:not(:first-child) {
+      margin-left: var(--margin-extra-large);
+    }
+  }
+  &__nav-number {
+    margin-right: 0.5rem;
+    font-weight: bold;
+  }
+  &__nav-link {
+    font-family: var(--ff-sans-cond);
+    font-size: var(--fs-300);
+    letter-spacing: 2.7px;
+    color: rgba(var(--color-tertiary), 1);
+    text-decoration: none;
+    padding: 3rem 0rem;
+    display: inline-block;
+  }
+}

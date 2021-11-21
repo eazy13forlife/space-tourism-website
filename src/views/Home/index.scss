@@ -1,0 +1,44 @@
+@use "../../styles/abstracts";
+
+.Home {
+  overflow: auto;
+  min-height: 100vh;
+  background-image: url("../../images/home/background-home-desktop.jpg");
+  @include abstracts.respondMax(950px) {
+    background-image: url("../../images/home/background-home-tablet.jpg");
+    background-size: cover;
+    padding-bottom: 8rem;
+  }
+  &__main {
+    margin-top: 8rem;
+  }
+  &__heading-major {
+    display: block;
+  }
+  &__container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include abstracts.respondMax(950px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__info {
+    flex: 0 0 45%;
+    @include abstracts.respondMax(950px) {
+      text-align: center;
+    }
+  }
+  &__description {
+    @include abstracts.respondMax(950px) {
+      width: 70%;
+      margin: auto;
+    }
+  }
+  &__button {
+    margin-top: 10rem;
+  }
+}

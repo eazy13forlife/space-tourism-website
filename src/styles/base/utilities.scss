@@ -2,7 +2,7 @@
   max-width: 1140px;
   height: 100%;
   margin: 0 auto;
-  padding: 0rem 3rem;
+  padding: 0rem 7rem;
 }
 
 .sr-only {
@@ -24,4 +24,18 @@
 .grid {
   display: grid;
   gap: var(--gap, 1rem);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.color-primary {
+  color: rgba(var(--color-primary), 1);
+}
+.color-secondary {
+  color: rgba(var(--color-secondary), 1);
+}
+.color-tertiary {
+  color: rgba(var(--color-tertiary), 1);
 }
