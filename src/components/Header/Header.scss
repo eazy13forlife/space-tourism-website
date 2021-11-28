@@ -3,54 +3,153 @@
 .Header {
   display: flex;
   align-items: center;
-  margin-top: 2.5rem;
+  margin-top: var(--margin-medium);
   @include abstracts.respondMax(abstracts.$desktop-small) {
     margin-top: 0rem;
   }
+  @include abstracts.respondMax(abstracts.$tablet) {
+    margin-top: var(--margin-medium);
+  }
   &__logo {
     margin-left: var(--margin-extra-large);
+    margin-right: 3rem;
+  }
+  &__nav-mobile-checkbox {
+    display: none;
+    &:checked ~ .Header__nav {
+      right: 0rem;
+    }
+    &:checked ~ .Header__nav-mobile-button .Header__nav-mobile-icon {
+      background-color: transparent;
+    }
+    &:checked ~ .Header__nav-mobile-button .Header__nav-mobile-icon::before {
+      bottom: 0rem;
+      transform: rotate(45deg);
+    }
+    &:checked ~ .Header__nav-mobile-button .Header__nav-mobile-icon::after {
+      top: 0rem;
+      transform: rotate(-45deg);
+    }
+  }
+  &__nav-mobile-button {
+    width: 5rem;
+    height: 4rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 3rem;
+    top: 2rem;
+    z-index: 5;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      display: flex;
+    }
+  }
+  &__nav-mobile-icon {
+    height: 3px;
+    width: 3.5rem;
+    position: relative;
+    background-color: rgba(var(--color-secondary), 1);
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(var(--color-secondary), 1);
+    }
+    &::before {
+      bottom: 1rem;
+    }
+    &::after {
+      top: 1rem;
+    }
   }
   &__nav {
     position: relative;
-    background-color: rgba(var(--color-tertiary), 0.1);
+    background-color: rgba(var(--color-primary), 1);
     padding: 0rem 12rem;
     margin-left: auto;
-    -webkit-backdrop-filter: blur(1rem);
-    backdrop-filter: blur(1rem);
-    @include abstracts.respondMax(abstracts.$desktop-small) {
+    @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+      background-color: rgba(var(--color-tertiary), 0.1);
+      -webkit-backdrop-filter: blur(1rem);
+      backdrop-filter: blur(1rem);
+    }
+
+    @include abstracts.respondMax(abstracts.$desktop-medium) {
       padding: 0rem 3rem;
+    }
+    @include abstracts.respondMax(abstracts.$tablet) {
+      position: absolute;
+      top: 0%;
+      right: -100rem;
+      height: 100%;
+      width: 60%;
+      z-index: 3;
+      backdrop-filter: blur(3rem);
+      transition: right 900ms cubic-bezier(0.33, 1, 0.68, 1);
+    }
+  }
+  &__nav-item {
+    .underline {
+      @include abstracts.respondMax(abstracts.$tablet) {
+        border-bottom: 0px solid transparent;
+      }
+    }
+    .underline--inactive {
+      &:hover {
+        @include abstracts.respondMax(abstracts.$tablet) {
+          border-bottom: 0px solid transparent;
+        }
+      }
+    }
+    .underline--active {
+      @include abstracts.respondMax(abstracts.$tablet) {
+        border-bottom: 0px solid transparent;
+      }
     }
   }
   &__line {
-    position: absolute;
-    width: 40rem;
-    height: 1px;
-    top: 50%;
-    right: 95%;
-    background-color: rgba(var(--color-tertiary), 0.4);
-    @include abstracts.respondMax(1200px) {
-      width: 25rem;
+    width: 100%;
+    height: var(--line-width);
+    background-color: var(--line-color);
+    margin-right: -3rem;
+
+    z-index: 3;
+    @include abstracts.respondMax(abstracts.$desktop-medium) {
+      margin-right: -2rem;
     }
-    @include abstracts.respondMax(1060px) {
+    @include abstracts.respondMax(abstracts.$tablet) {
       display: none;
     }
   }
   &__list {
     list-style-type: none;
     display: flex;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      flex-direction: column;
+      margin-top: 8rem;
+      margin-left: 3rem;
+    }
   }
   &__nav-item {
     &:not(:first-child) {
       margin-left: var(--margin-extra-large);
+      @include abstracts.respondMax(abstracts.$tablet) {
+        margin-left: 0rem;
+      }
     }
   }
   &__nav-number {
     margin-right: 0.5rem;
     font-weight: bold;
+    @include abstracts.respondMax(abstracts.$desktop-medium) {
+      display: none;
+    }
   }
   &__nav-link {
     font-family: var(--ff-sans-cond);
-    font-size: var(--fs-300);
+    font-size: 1.6rem;
     letter-spacing: 2.7px;
     color: rgba(var(--color-tertiary), 1);
     text-decoration: none;

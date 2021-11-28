@@ -1,0 +1,113 @@
+@use "../../styles/abstracts";
+
+.Destination {
+  background-image: url("../../images/destination/background-destination-desktop.jpg");
+  background-size: cover;
+  @include abstracts.respondMax(abstracts.$tablet) {
+    background-image: url("../../images/destination/background-destination-tablet.jpg");
+  }
+  &__main {
+    margin-top: 7rem;
+  }
+  &__page-title {
+    @include abstracts.respondMax(abstracts.$tablet-small) {
+      text-align: center;
+    }
+  }
+  &__destination-content {
+    margin-top: 6rem;
+    color: rgba(var(--color-secondary), 1);
+    display: flex;
+    justify-content: space-between;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      flex-direction: column;
+    }
+  }
+  &__image-container {
+    flex: 0 0 40%;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      width: 50%;
+      align-self: center;
+    }
+  }
+  &__image {
+    width: 100%;
+  }
+  &__text-content {
+    flex: 0 0 45%;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      text-align: center;
+    }
+  }
+  &__nav {
+    @include abstracts.respondMax(abstracts.$tablet) {
+      margin-top: 4rem;
+    }
+  }
+  &__nav-list {
+    display: flex;
+    list-style-type: none;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      justify-content: center;
+    }
+  }
+  &__nav-item {
+    padding-bottom: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    &:not(:first-child) {
+      margin-left: 3.5rem;
+    }
+    &--inactive {
+      color: rgba(var(--color-secondary), 1);
+    }
+    &--active {
+      color: rgba(var(--color-tertiary), 1);
+    }
+  }
+  &__destination {
+    font-family: var(--ff-serif);
+    font-size: var(--fs-800);
+    text-transform: uppercase;
+    color: rgba(var(--color-tertiary), 1);
+    margin-top: 2rem;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      margin-top: 3rem;
+    }
+  }
+  &__description {
+    margin-top: 1rem;
+  }
+  &__distance-time {
+    display: flex;
+    margin-top: 5rem;
+    border-top: var(--line-width) solid var(--line-color);
+    padding-top: 3rem;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      justify-content: center;
+    }
+    @include abstracts.respondMax(abstracts.$mobile) {
+      flex-direction: column;
+    }
+  }
+  &__time-container {
+    margin-left: 6rem;
+    @include abstracts.respondMax(abstracts.$mobile) {
+      margin-left: 0rem;
+      margin-top: 3rem;
+    }
+  }
+  &__stat-heading {
+    font-family: var(--ff-sans-cond);
+    font-size: var(--fs-200);
+    text-transform: uppercase;
+    letter-spacing: 2.36px;
+    font-weight: 300;
+  }
+  &__stat {
+    font-family: var(--ff-serif);
+    font-size: var(--fs-500);
+    color: rgba(var(--color-tertiary), 1);
+    text-transform: uppercase;
+  }
+}

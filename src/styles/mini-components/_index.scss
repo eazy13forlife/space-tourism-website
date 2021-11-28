@@ -58,11 +58,13 @@
     height: 1rem;
     width: 1rem;
   }
-  &--active {
-    background-color: var(--color-tertiary);
+  &--inactive {
+    &:hover {
+      background-color: #85868b;
+    }
   }
-  &:hover {
-    background-color: #85868b;
+  &--active {
+    background-color: rgba(var(--color-tertiary), 1);
   }
 }
 

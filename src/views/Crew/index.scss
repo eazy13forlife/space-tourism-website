@@ -1,0 +1,49 @@
+.Crew {
+  background-image: url("../../images/crew/background-crew-desktop.jpg");
+  background-size: cover;
+  &__main {
+    margin-top: 8rem;
+  }
+  &__container {
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: green;
+  }
+  &__text-info {
+    flex: 0 0 50%;
+  }
+  &__title {
+    font-family: var(--ff-serif);
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: var(--fs-600);
+    color: rgba(var(--color-tertiary), 0.5);
+    display: block;
+  }
+  &__name {
+    font-family: var(--ff-serif);
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: var(--fs-700);
+    color: rgba(var(--color-tertiary), 1);
+  }
+  &__slider-buttons {
+    display: flex;
+    margin-top: 5rem;
+  }
+  &__slider-button {
+    &:not(:first-child) {
+      margin-left: 1.5rem;
+    }
+  }
+  &__image-container {
+    flex: 0 0 40%;
+    align-self: flex-end;
+  }
+  &__image {
+    width: 100%;
+  }
+}

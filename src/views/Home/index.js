@@ -3,12 +3,12 @@ import React from "react";
 import Header from "../../components/Header/Header.js";
 import "./index.scss";
 
-const Home = (ownProps) => {
-  console.log(ownProps);
+const Home = () => {
   return (
-    <div className="Home">
+    <div className="Home page">
+      <a href="# main">Skip to content</a>
       <Header />
-      <main className="Home__main">
+      <main className="Home__main" id="main">
         <section className="Home__content">
           <div className="container Home__container">
             <div className="Home__info">
@@ -16,7 +16,7 @@ const Home = (ownProps) => {
                 <span className="Home__heading-minor heading-5 uppercase color-secondary ">
                   So, you want to travel to
                 </span>
-                <span className="heading-1 uppercase Home__heading-major color-tertiary">
+                <span className=" Home__heading-major  uppercase color-tertiary">
                   Space
                 </span>
               </h1>

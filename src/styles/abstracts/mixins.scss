@@ -1,5 +1,7 @@
-$desktop-small: 1000px;
+$desktop-medium: 1000px;
+$desktop-small: 950px;
 $tablet: 768px;
+$tablet-small: 550px;
 $mobile: 375px;
 
 @mixin respondMax($size) {

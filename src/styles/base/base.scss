@@ -21,7 +21,11 @@
     --fs-400: 1.6rem;
     --fs-300: 1.4rem;
   }
+  @include abstracts.respondMax(abstracts.$tablet-small) {
+    --fs-900: 10.5rem;
+  }
   @include abstracts.respondMax(abstracts.$mobile) {
+    --fs-900: 8rem;
     --fs-800: 5.6rem;
     --fs-700: 2.4rem;
     --fs-600: 1.6rem;
@@ -38,6 +42,9 @@
   --margin-medium: 2rem;
   --margin-regular: 1.4rem;
   --margin-small: 1.2rem;
+
+  --line-width: 1px;
+  --line-color: rgba(var(--color-tertiary), 0.4);
 }
 html {
   font-size: 62.5%;

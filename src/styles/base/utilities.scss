@@ -1,8 +1,20 @@
+@use "../abstracts";
+.page {
+  overflow: auto;
+  padding-bottom: 8rem;
+}
 .container {
   max-width: 1140px;
   height: 100%;
   margin: 0 auto;
   padding: 0rem 7rem;
+
+  @include abstracts.respondMax(abstracts.$tablet-small) {
+    padding: 0 5rem;
+  }
+  @include abstracts.respondMax(abstracts.$mobile) {
+    padding: 0rem 2.5rem;
+  }
 }
 
 .sr-only {
@@ -15,15 +27,6 @@
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
-}
-.flex {
-  display: flex;
-  gap: var(--gap, 1rem);
-}
-
-.grid {
-  display: grid;
-  gap: var(--gap, 1rem);
 }
 
 .uppercase {
