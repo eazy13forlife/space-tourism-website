@@ -1,19 +1,44 @@
+@use "../../styles/abstracts";
+
 .Crew {
+  overflow: auto;
   background-image: url("../../images/crew/background-crew-desktop.jpg");
   background-size: cover;
+  @include abstracts.respondMax(abstracts.$mobile) {
+    padding-bottom: 8rem;
+  }
   &__main {
     margin-top: 8rem;
   }
   &__container {
   }
+  &__page-title {
+    @include abstracts.respondMax(abstracts.$mobile) {
+      text-align: center;
+    }
+  }
   &__content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: green;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      flex-direction: column;
+      text-align: center;
+    }
   }
   &__text-info {
-    flex: 0 0 50%;
+    flex: 0 0 40%;
+    align-self: flex-start;
+    margin-top: 10rem;
+    margin-right: 5rem;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      margin-top: 8rem;
+      margin-right: 0rem;
+    }
+    @include abstracts.respondMax(abstracts.$mobile) {
+      display: flex;
+      flex-direction: column;
+      margin-top: 4rem;
+    }
   }
   &__title {
     font-family: var(--ff-serif);
@@ -30,9 +55,21 @@
     font-size: var(--fs-700);
     color: rgba(var(--color-tertiary), 1);
   }
+  &__description {
+    width: 100%;
+  }
   &__slider-buttons {
     display: flex;
     margin-top: 5rem;
+    margin-bottom: 5rem;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      justify-content: center;
+    }
+    @include abstracts.respondMax(abstracts.$mobile) {
+      order: -1;
+      margin-top: 0rem;
+      margin-bottom: 4rem;
+    }
   }
   &__slider-button {
     &:not(:first-child) {
@@ -40,10 +77,23 @@
     }
   }
   &__image-container {
-    flex: 0 0 40%;
     align-self: flex-end;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      align-self: center;
+    }
+    @include abstracts.respondMax(abstracts.$mobile) {
+      order: -2;
+      display: flex;
+      justify-content: center;
+      margin-top: 5rem;
+      width: 100%;
+      border-bottom: var(--line-width) solid var(--line-color);
+    }
   }
   &__image {
-    width: 100%;
+    max-height: 60vw;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      max-height: 70vw;
+    }
   }
 }

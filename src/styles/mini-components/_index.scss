@@ -51,7 +51,7 @@
 .slider-1 {
   height: 1.5rem;
   width: 1.5rem;
-  background-color: #36373f;
+  background-color: rgba(var(--color-tertiary), 0.2);
   border-radius: 50%;
   cursor: pointer;
   @include abstracts.respondMax(abstracts.$tablet) {
@@ -73,8 +73,8 @@
   height: 8rem;
   background-color: transparent;
   border-radius: 50%;
-  border: 1px solid var(--color-tertiary);
-  color: var(--color-tertiary);
+  border: 1px solid rgba(var(--color-tertiary), 0.4);
+  color: rgba(var(--color-tertiary), 1);
   cursor: pointer;
   font-family: var(--ff-sans);
   font-size: var(--fs-600);
@@ -90,13 +90,15 @@
     height: 4rem;
     width: 4rem;
   }
-  &--active {
-    background-color: var(--color-tertiary);
-    border: 1px solid var(--color-tertiary);
-    color: var(--color-primary);
+  &--inactive {
+    &:hover {
+      border: 1px solid rgba(var(--color-tertiary), 1);
+    }
   }
-  &:hover {
-    border: 2px solid var(--color-tertiary);
+  &--active {
+    background-color: rgba(var(--color-tertiary), 1);
+    border: 1px solid rgba(var(--color-tertiary), 1);
+    color: rgba(var(--color-primary), 1);
   }
 }
 

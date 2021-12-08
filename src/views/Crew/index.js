@@ -10,7 +10,7 @@ crewArray.fill();
 const Crew = () => {
   const [crewIndex, setCrewIndex] = useState(0);
 
-  const { image, name, title, description } = crew[crewIndex];
+  const { image, imageWebP, name, title, description } = crew[crewIndex];
 
   const renderActivity = (index) => {
     if (crewIndex === index) {
@@ -28,7 +28,9 @@ const Crew = () => {
         onClick={() => {
           setCrewIndex(index);
         }}
-      ></div>
+      >
+        <span className="sr-only">{crew[index].name}</span>
+      </div>
     );
   });
 
@@ -37,7 +39,7 @@ const Crew = () => {
       <Header />
       <main className="Crew__main">
         <div className="Crew__container container">
-          <h1 className="page-title">
+          <h1 className="page-title Crew__page-title">
             <span className="page-title-number" aria-hidden="true">
               02
             </span>
@@ -52,14 +54,17 @@ const Crew = () => {
               <p className="Crew__description body-text color-secondary ">
                 {description}
               </p>
-              .<div className="Crew__slider-buttons">{renderedSliders}</div>
+              <div className="Crew__slider-buttons">{renderedSliders}</div>
             </article>
             <figure className="Crew__image-container">
-              <img
-                src={image}
-                alt={`An image of ${name}`}
-                className="Crew__image"
-              />
+              <picture>
+                <source srcSet={imageWebP} type="image/webp" />
+                <img
+                  src={image}
+                  alt={`An image of ${name}`}
+                  className="Crew__image"
+                />
+              </picture>
             </figure>
           </div>
         </div>

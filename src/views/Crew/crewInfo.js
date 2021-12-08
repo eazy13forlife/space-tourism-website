@@ -3,6 +3,7 @@ import images from "../../images";
 const crew = {
   0: {
     image: images.imageDouglasHurley,
+    imageWebP: images.imageDouglasHurleyWebP,
     name: "Douglas Hurley",
     title: "Commander",
     description:
@@ -10,6 +11,7 @@ const crew = {
   },
   1: {
     image: images.imageMarkShuttleworth,
+    imageWebP: images.imageMarkShuttleworthWebP,
     name: "Mark Shuttleworth",
     title: "Mission Specialist",
     description:
@@ -17,6 +19,7 @@ const crew = {
   },
   2: {
     image: images.imageVictorGlover,
+    imageWebP: images.imageVictorGloverWebP,
     name: "Victor Glover",
     title: "Pilot",
     description:
@@ -24,6 +27,7 @@ const crew = {
   },
   3: {
     image: images.imageAnoushehAnsari,
+    imageWebP: images.imageAnoushehAnsariWebP,
     name: "Anousheh Ansari",
     title: "Flight Engineer",
     description:

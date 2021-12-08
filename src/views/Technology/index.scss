@@ -1,0 +1,108 @@
+@use "../../styles/abstracts";
+
+.Technology {
+  background-image: url("../../images/technology/background-technology-desktop.jpg");
+  &__main {
+    margin-top: 7rem;
+    padding-left: 10rem;
+    @include abstracts.respondMax(900px) {
+      padding-left: 7rem;
+    }
+    @include abstracts.respondMax(abstracts.$tablet) {
+      padding-left: 0rem;
+    }
+  }
+  &__container {
+    margin-top: 10rem;
+    grid-template-columns: 55% 45%;
+    grid-column-gap: 5rem;
+    color: rgba(var(--color-secondary), 1);
+    @include abstracts.respondMax(abstracts.$tablet) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 30vh auto;
+      grid-row-gap: 5rem;
+      margin-top: 7rem;
+    }
+    @include abstracts.respondMax(abstracts.$mobile) {
+      margin-top: 4rem;
+    }
+  }
+  &__slider-description {
+    display: flex;
+    grid-column: 1/2;
+    align-self: center;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      grid-row: 2/3;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  &__page-title {
+    @include abstracts.respondMax(abstracts.$tablet) {
+      padding-left: 4rem;
+    }
+    @include abstracts.respondMax(abstracts.$mobile) {
+      padding-left: 0rem;
+      text-align: center;
+    }
+  }
+  &__rendered-sliders {
+    @include abstracts.respondMax(abstracts.$tablet) {
+      display: flex;
+      margin: auto;
+    }
+  }
+  &__slider {
+    &:not(:first-child) {
+      margin-top: 3rem;
+      @include abstracts.respondMax(abstracts.$tablet) {
+        margin-top: 0rem;
+        margin-left: 2rem;
+      }
+    }
+  }
+  &__text-info {
+    margin-left: 5rem;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      margin-left: 0rem;
+    }
+  }
+  &__description {
+    @include abstracts.respondMax(abstracts.$tablet) {
+      width: 70%;
+      margin: 2rem auto 0 auto;
+    }
+    @include abstracts.respondMax(abstracts.$mobile) {
+      width: 90%;
+    }
+  }
+  &__term-subheading {
+    display: block;
+    font-weight: 300;
+  }
+  &__term {
+    font-family: var(--serif);
+    font-size: var(--fs-700);
+    color: rgba(var(--color-tertiary), 1);
+    text-transform: uppercase;
+    font-weight: 400;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      margin-top: 4rem;
+    }
+  }
+  &__image-container {
+    grid-row: 1/2;
+    grid-column: 2/-1;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      grid-column: 1/-1;
+      grid-row: 1/2;
+    }
+  }
+  &__image {
+    width: 100%;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
