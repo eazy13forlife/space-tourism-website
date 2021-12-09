@@ -6,6 +6,9 @@
   @include abstracts.respondMax(abstracts.$tablet) {
     background-image: url("../../images/destination/background-destination-tablet.jpg");
   }
+  @include abstracts.respondMax(abstracts.$mobile) {
+    background-image: url("../../images/destination/background-destination-mobile.jpg");
+  }
   &__main {
     margin-top: 7rem;
   }

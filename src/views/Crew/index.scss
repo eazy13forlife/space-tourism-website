@@ -4,7 +4,11 @@
   overflow: auto;
   background-image: url("../../images/crew/background-crew-desktop.jpg");
   background-size: cover;
+  @include abstracts.respondMax(abstracts.$tablet) {
+    background-image: url("../../images/crew/background-crew-tablet.jpg");
+  }
   @include abstracts.respondMax(abstracts.$mobile) {
+    background-image: url("../../images/crew/background-crew-mobile.jpg");
     padding-bottom: 8rem;
   }
   &__main {

@@ -32,6 +32,8 @@
     }
   }
   &__nav-mobile-button {
+    background-color: transparent;
+    border: none;
     width: 5rem;
     height: 4rem;
     display: none;
@@ -60,9 +62,11 @@
     }
     &::before {
       bottom: 1rem;
+      left: 0;
     }
     &::after {
       top: 1rem;
+      left: 0;
     }
   }
   &__nav {

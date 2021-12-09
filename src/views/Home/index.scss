@@ -6,8 +6,10 @@
   background-size: cover;
   @include abstracts.respondMax(abstracts.$desktop-small) {
     background-image: url("../../images/home/background-home-tablet.jpg");
-    background-size: cover;
     padding-bottom: 8rem;
+  }
+  @include abstracts.respondMax(abstracts.$mobile) {
+    background-image: url("../../images/home/background-home-mobile.jpg");
   }
   &__main {
     margin-top: 8rem;

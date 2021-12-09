@@ -9,11 +9,16 @@
       padding-left: 7rem;
     }
     @include abstracts.respondMax(abstracts.$tablet) {
+      background-image: url("../../images/technology/background-technology-tablet.jpg");
+      padding-left: 0rem;
+    }
+    @include abstracts.respondMax(abstracts.$mobile) {
+      background-image: url("../../images/technology/background-technology-mobile.jpg");
       padding-left: 0rem;
     }
   }
   &__container {
-    margin-top: 10rem;
+    margin-top: 7rem;
     grid-template-columns: 55% 45%;
     grid-column-gap: 5rem;
     color: rgba(var(--color-secondary), 1);
