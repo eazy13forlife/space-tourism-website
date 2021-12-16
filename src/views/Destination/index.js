@@ -27,17 +27,20 @@ const Destination = () => {
 
   const renderedNavItems = navItems.map((item, index) => {
     return (
-      <li
+      <button
         key={index}
-        className={`Destination__nav-item underline ${renderActivityClasses(
+        className={`Destination__nav-item nav-text underline ${renderActivityClasses(
           item
         )} `}
         onClick={() => {
           setDestination(item);
         }}
+        aria-controls={`${item}-tab`}
+        role="tab"
+        aria-selected={destination === item ? "true" : "false"}
       >
         {item}
-      </li>
+      </button>
     );
   });
 
@@ -46,7 +49,7 @@ const Destination = () => {
       <Header />
       <main className="Destination__main">
         <div className="container Destination__container">
-          <h1 className="page-title Destination__page-title">
+          <h1 className="page-title Destination__page-title" tabIndex="-1">
             <span className="page-title-number" aria-hidden="true">
               01
             </span>{" "}
@@ -61,12 +64,17 @@ const Destination = () => {
               />
             </figure>
             <div className="Destination__text-content">
-              <nav className="Destination__nav">
-                <ul className="Destination__nav-list nav-text">
+              <div className="Destination__tabs">
+                <ul className="Destination__tab-list nav-text" role="tablist">
                   {renderedNavItems}
                 </ul>
-              </nav>
-              <h2 className="Destination__destination">{name}</h2>
+              </div>
+              <h2
+                className="Destination__destination"
+                id={`${destination}-tab`}
+              >
+                {name}
+              </h2>
               <p className="body-text Destination__description">
                 {description}
               </p>

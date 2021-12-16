@@ -36,6 +36,12 @@
 .uppercase {
   text-transform: uppercase;
 }
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0rem;
+  box-shadow: none;
+}
 
 .color-primary {
   color: rgba(var(--color-primary), 1);

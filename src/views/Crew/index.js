@@ -22,15 +22,17 @@ const Crew = () => {
 
   const renderedSliders = crewArray.map((item, index) => {
     return (
-      <div
+      <button
         className={`Crew__slider-button slider-1 ${renderActivity(index)}`}
         key={index}
+        aria-controls={`${crew[index].title}-tab`}
+        aria-label={crew[index].name}
+        role="tab"
+        aria-selected={crewIndex === index ? "true" : "false"}
         onClick={() => {
           setCrewIndex(index);
         }}
-      >
-        <span className="sr-only">{crew[index].name}</span>
-      </div>
+      ></button>
     );
   });
 
@@ -47,14 +49,20 @@ const Crew = () => {
           </h1>
           <div className="Crew__content">
             <article className="Crew__text-info">
-              <h2 className="Crew__name">
+              <h2 className="Crew__name" id={`${title}-tab`} tab-index="0">
                 <span className="Crew__title">{title}</span>
                 {name}
               </h2>
               <p className="Crew__description body-text color-secondary ">
                 {description}
               </p>
-              <div className="Crew__slider-buttons">{renderedSliders}</div>
+              <div
+                className="Crew__slider-buttons"
+                role="tablist"
+                aria-label="crew member list"
+              >
+                {renderedSliders}
+              </div>
             </article>
             <figure className="Crew__image-container">
               <picture>

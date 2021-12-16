@@ -42,12 +42,12 @@
       text-align: center;
     }
   }
-  &__nav {
+  &__tabs {
     @include abstracts.respondMax(abstracts.$tablet) {
       margin-top: 4rem;
     }
   }
-  &__nav-list {
+  &_tab-list {
     display: flex;
     list-style-type: none;
     @include abstracts.respondMax(abstracts.$tablet) {
@@ -72,6 +72,7 @@
     font-family: var(--ff-serif);
     font-size: var(--fs-800);
     text-transform: uppercase;
+    font-weight: 400;
     color: rgba(var(--color-tertiary), 1);
     margin-top: 2rem;
     @include abstracts.respondMax(abstracts.$tablet) {

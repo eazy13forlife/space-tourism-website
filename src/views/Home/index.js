@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Header from "../../components/Header/Header.js";
 import "./index.scss";
@@ -6,7 +7,6 @@ import "./index.scss";
 const Home = () => {
   return (
     <div className="Home page">
-      <a href="# main">Skip to content</a>
       <Header />
       <main className="Home__main" id="main">
         <section className="Home__content">
@@ -27,7 +27,12 @@ const Home = () => {
                 out of this world experience..
               </p>
             </div>
-            <button className="button-main Home__button">Explore</button>
+            <Link
+              to="/destination"
+              className="Home__button Link__button button-main"
+            >
+              Explore
+            </Link>
           </div>
         </section>
       </main>

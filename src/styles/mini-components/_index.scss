@@ -42,10 +42,18 @@
     height: 15rem;
     width: 15rem;
   }
+
   &:hover::after,
   &:focus::after {
     transform: scale(1.5);
   }
+}
+.Link__button {
+  text-decoration: none;
+  font-family: var(--ff-serif);
+  font-size: var(--fs-600);
+  letter-spacing: 2px;
+  color: inherit;
 }
 
 .slider-1 {

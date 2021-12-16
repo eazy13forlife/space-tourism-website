@@ -9,6 +9,7 @@ const Header = () => {
 
   const [currentPath, setCurrentPath] = useState(location.pathname);
   const [navExpanded, setNavExpanded] = useState(false);
+
   useEffect(() => {
     setCurrentPath(location.pathname);
   }, [location.pathname]);
@@ -25,30 +26,34 @@ const Header = () => {
       <div className="Header__logo">
         <Logo />
       </div>
-      <input
-        type="checkbox"
-        className="Header__nav-mobile-checkbox"
-        id="nav-mobile-button"
-        onChange={(e) => {
-          if (e.target.checked) {
+      <button
+        htmlFor="nav-mobile-button"
+        className="Header__nav-mobile-button"
+        aria-controls="primary-navigation"
+        aria-expanded={navExpanded}
+        onClick={() => {
+          if (!navExpanded) {
             setNavExpanded(true);
           } else {
             setNavExpanded(false);
           }
         }}
-      />
-      <label
-        htmlFor="nav-mobile-button"
-        className="Header__nav-mobile-button"
-        aria-controls="primary-navigation"
-        aria-expanded={navExpanded}
       >
-        <span className="Header__nav-mobile-icon">
+        <span
+          className={`Header__nav-mobile-icon ${
+            navExpanded
+              ? "Header__nav-mobile-icon--x"
+              : "Header__nav-mobile-icon--burger"
+          }`}
+        >
           <span className="sr-only">Menu</span>
         </span>
-      </label>
+      </button>
       <div className="Header__line"></div>
-      <nav className="Header__nav">
+      <nav
+        className="Header__nav"
+        style={navExpanded ? { right: "0rem" } : null}
+      >
         <ul className="Header__list" id="primary-navigation">
           <li className="Header__nav-item">
             <Link

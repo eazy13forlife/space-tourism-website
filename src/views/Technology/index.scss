@@ -105,6 +105,8 @@
   }
   &__image {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     @include abstracts.respondMax(abstracts.$tablet) {
       height: 100%;
       object-fit: cover;

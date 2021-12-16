@@ -30,7 +30,7 @@
     }
   }
   &__text-info {
-    flex: 0 0 40%;
+    flex: 0 0 50%;
     align-self: flex-start;
     margin-top: 10rem;
     margin-right: 5rem;
@@ -95,7 +95,7 @@
     }
   }
   &__image {
-    max-height: 60vw;
+    width: 100%;
     @include abstracts.respondMax(abstracts.$tablet) {
       max-height: 70vw;
     }

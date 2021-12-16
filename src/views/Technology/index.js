@@ -24,15 +24,19 @@ const Technology = () => {
 
   const renderedSliders = sliders.map((item, index) => {
     return (
-      <div
+      <button
         className={renderSliderActivityClass(index)}
         key={index}
+        aria-controls={`${TechnologyInfo[technologyIndex].name}-tab`}
+        aria-selected={technologyIndex === index ? "true" : "false"}
+        aria-label={TechnologyInfo[technologyIndex].name}
+        role="tab"
         onClick={() => {
           setTechnologyIndex(index);
         }}
       >
-        {index + 1}
-      </div>
+        <span aria-hidden="true">{index + 1}</span>
+      </button>
     );
   });
 
@@ -48,7 +52,7 @@ const Technology = () => {
         </h1>
         <div className="Technology__container grid-container">
           <div className="Technology__slider-description">
-            <div className="Technology__rendered-sliders">
+            <div className="Technology__rendered-sliders" role="tablist">
               {renderedSliders}
             </div>
             <div className="Technology__text-info">
