@@ -1,6 +1,6 @@
 # Space Tourism Website
 
-This is a solution to the [Photosnap Website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/photosnap-multipage-website-nMDSrNmNW). It is a fully responsive, 4 page marketing website.
+This is a solution to the [Space Tourism challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/photosnap-multipage-website-nMDSrNmNW](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). It is a fully responsive, 4 page website.
 
 ## Images
 ### Desktop
