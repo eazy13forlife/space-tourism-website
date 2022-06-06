@@ -4,10 +4,9 @@ This is a solution to the [Photosnap Website challenge on Frontend Mentor](https
 
 ## Images
 ### Desktop
-![screenshot-localhost_3000-2022 06 05-20_51_55](https://user-images.githubusercontent.com/72288176/172091938-de77b58a-3f40-4f6e-9d71-9518067690e3.png)
+![screenshot-localhost_3000-2022 06 05-23_10_21](https://user-images.githubusercontent.com/72288176/172105423-8187a182-41e8-4dbc-9e9f-c8599795feb4.png)
 ### Mobile
-![Screenshot 2022-06-05 at 21-00-27 Photosnap Create And Share High Quality Photo Stories](https://user-images.githubusercontent.com/72288176/172092649-6817e4ee-36b1-4bba-988c-fdcd4b661514.png)
-
+![Screenshot 2022-06-05 at 23-10-56 React App](https://user-images.githubusercontent.com/72288176/172105455-0372a4ba-0d56-42a2-896f-b4eaa3d19805.png)
 
 ## Technologies
 * React
