@@ -21,7 +21,7 @@ This is a solution to the [Photosnap Website challenge on Frontend Mentor](https
 
 
 ## My Process
-My main focus of this website was on accessibility. I learned a lot about screen readers, the types of inputs I should be using, aria controls, etc. If I'm going to focus on front-end development, I want to make accessibility a big priority for me.
+My main focus of this website was on accessibility. I learned a lot about assistive technology, the types of inputs I should be using, and aria roles and attributes. If I'm going to focus on front-end development, I want to make accessibility a big priority for me.
 
 Looking at a figma design file, I initially set up custom variables for colors, font size, and font family. Then, I created custom components used throughout the site like buttons (and their interactivity states) and any cards. Finally, I studied the grid layout and positioning of elements before I began coding.
 
