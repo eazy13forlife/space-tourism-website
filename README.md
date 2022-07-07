@@ -2,6 +2,9 @@
 
 This is a solution to the [Space Tourism challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). It is a fully responsive, 4 page website.
 
+## Live Url
+https://space-tourism-website-lilac.vercel.app/
+
 ## Images
 ### Desktop
 ![screenshot-localhost_3000-2022 06 05-23_10_21](https://user-images.githubusercontent.com/72288176/172105423-8187a182-41e8-4dbc-9e9f-c8599795feb4.png)
