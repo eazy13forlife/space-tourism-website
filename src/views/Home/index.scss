@@ -2,6 +2,7 @@
 
 .Home {
   position: relative;
+  min-height: 100vh;
   background-image: url("../../images/home/background-home-desktop.jpg");
   background-size: cover;
   @include abstracts.respondMax(abstracts.$desktop-small) {
